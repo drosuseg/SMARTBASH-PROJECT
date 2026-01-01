@@ -1,0 +1,26 @@
+/* Tailwind base styles */
+@tailwind base;
+
+/* Tailwind component classes */
+@tailwind components;
+
+/* Tailwind utility classes */
+@tailwind utilities;
+
+/* Your custom global styles */
+body {
+  font-family: 'Inter', sans-serif; /* prettier font */
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb; /* softer gray background */
+  color: #111827; /* default text color */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
