@@ -1,12 +1,17 @@
 "use client";
 import {useState} from "react";
 
-export default function FileUpload({ label, instructions }) {
+export default function FileUpload({ label, instructions, onFileChange }) {
   const [fileName, setFileName] = useState("");
 
   const handleFileChange = (e) => {
     if (e.target.files?.[0]) {
-      setFileName(e.target.files[0].name);
+      const file = e.target.files[0];
+      setFileName(file.name);
+      // Pass file to parent component
+      if (onFileChange) {
+        onFileChange(file);
+      }
     }
   };
 
