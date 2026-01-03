@@ -1,3 +1,5 @@
+"use client";
+
 export default function InputField({ 
   label, 
   type = "text", 
